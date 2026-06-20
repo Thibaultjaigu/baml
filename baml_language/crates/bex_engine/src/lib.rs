@@ -2350,7 +2350,10 @@ impl BexEngine {
             .enumerate()
             .map(|(i, ty)| {
                 (
-                    generic_param_names.get(i).cloned().unwrap_or_else(|| i.to_string()),
+                    generic_param_names
+                        .get(i)
+                        .cloned()
+                        .unwrap_or_else(|| i.to_string()),
                     ty,
                 )
             })

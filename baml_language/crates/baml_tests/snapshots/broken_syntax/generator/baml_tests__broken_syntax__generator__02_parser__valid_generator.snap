@@ -3,72 +3,61 @@ source: crates/baml_tests/src/generated_tests.rs
 ---
 === SYNTAX TREE ===
 SOURCE_FILE
-  GENERATOR_DEF
+  GENERATOR_DEF "// Test: Generator declarations are properly parsed
+
+generator lang_python {
+  output_type "python/pydantic"
+  output_dir "../python"
+  version "0.68.0"
+  naming_convention "preserve-case"
+}"
     KW_GENERATOR "generator"
     WORD "lang_python"
-    CONFIG_BLOCK
-      L_BRACE "{"
-      CONFIG_ITEM
-        WORD "output_type"
-        CONFIG_VALUE
-          STRING_LITERAL "python/pydantic"
-            QUOTE """
-            WORD "python"
-            SLASH "/"
-            WORD "pydantic"
-            QUOTE """
-      CONFIG_ITEM
-        WORD "output_dir"
-        CONFIG_VALUE
-          STRING_LITERAL "../python"
-            QUOTE """
-            DOT_DOT ".."
-            SLASH "/"
-            WORD "python"
-            QUOTE """
-      CONFIG_ITEM
-        WORD "version"
-        CONFIG_VALUE
-          STRING_LITERAL "0.68.0"
-            QUOTE """
-            FLOAT_LITERAL "0.68"
-            DOT "."
-            INTEGER_LITERAL "0"
-            QUOTE """
-      CONFIG_ITEM
-        WORD "naming_convention"
-        CONFIG_VALUE
-          STRING_LITERAL "preserve-case"
-            QUOTE """
-            WORD "preserve-case"
-            QUOTE """
-      R_BRACE "}"
-  GENERATOR_DEF
+    L_BRACE "{"
+    WORD "output_type"
+    QUOTE """
+    WORD "python"
+    SLASH "/"
+    WORD "pydantic"
+    QUOTE """
+    WORD "output_dir"
+    QUOTE """
+    DOT_DOT ".."
+    SLASH "/"
+    WORD "python"
+    QUOTE """
+    WORD "version"
+    QUOTE """
+    FLOAT_LITERAL "0.68"
+    DOT "."
+    INTEGER_LITERAL "0"
+    QUOTE """
+    WORD "naming_convention"
+    QUOTE """
+    WORD "preserve-case"
+    QUOTE """
+    R_BRACE "}"
+  GENERATOR_DEF "generator lang_typescript {
+  output_type typescript
+  output_dir "../typescript"
+  default_client_mode "async"
+}"
     KW_GENERATOR "generator"
     WORD "lang_typescript"
-    CONFIG_BLOCK
-      L_BRACE "{"
-      CONFIG_ITEM
-        WORD "output_type"
-        CONFIG_VALUE "typescript"
-          WORD "typescript"
-      CONFIG_ITEM
-        WORD "output_dir"
-        CONFIG_VALUE
-          STRING_LITERAL "../typescript"
-            QUOTE """
-            DOT_DOT ".."
-            SLASH "/"
-            WORD "typescript"
-            QUOTE """
-      CONFIG_ITEM
-        WORD "default_client_mode"
-        CONFIG_VALUE
-          STRING_LITERAL "async"
-            QUOTE """
-            WORD "async"
-            QUOTE """
-      R_BRACE "}"
+    L_BRACE "{"
+    WORD "output_type"
+    WORD "typescript"
+    WORD "output_dir"
+    QUOTE """
+    DOT_DOT ".."
+    SLASH "/"
+    WORD "typescript"
+    QUOTE """
+    WORD "default_client_mode"
+    QUOTE """
+    WORD "async"
+    QUOTE """
+    R_BRACE "}"
   CLASS_DEF
     KW_CLASS "class"
     WORD "MyClass"

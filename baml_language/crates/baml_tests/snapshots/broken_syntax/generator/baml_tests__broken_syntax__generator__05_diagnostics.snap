@@ -2,6 +2,26 @@
 source: crates/baml_tests/src/generated_tests.rs
 ---
 === COMPILER2 DIAGNOSTICS ===
+  [hir] warning: `generator lang_python` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+   ╭─[ valid_generator.baml:3:1 ]
+   │
+ 3 │ generator lang_python {
+   │ ──────────┬──────────  
+   │           ╰──────────── move this to baml.toml
+   │ 
+   │ Note: Error code: E0017
+───╯
+
+  [hir] warning: `generator lang_typescript` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+    ╭─[ valid_generator.baml:10:1 ]
+    │
+ 10 │ generator lang_typescript {
+    │ ────────────┬────────────  
+    │             ╰────────────── move this to baml.toml
+    │ 
+    │ Note: Error code: E0017
+────╯
+
   [type] error: type mismatch: expected baml.llm.Client, got null
     ╭─[ valid_generator.baml:19:2 ]
     │

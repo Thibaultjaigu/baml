@@ -19,4 +19,12 @@ class Foo {
 
 //----
 //- diagnostics
-// <no-diagnostics-expected>
+// warning: `generator lang_python` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+//    ╭─[ class_generator_keywords2.baml:5:1 ]
+//    │
+//  5 │ generator lang_python {
+//    │ ──────────┬──────────
+//    │           ╰──────────── move this to baml.toml
+//    │
+//    │ Note: Error code: E0017
+// ───╯

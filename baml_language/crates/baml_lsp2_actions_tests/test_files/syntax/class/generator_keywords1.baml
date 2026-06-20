@@ -33,17 +33,26 @@ class Foo {
 //     ╭─[ class_generator_keywords1.baml:13:5 ]
 //     │
 //  13 │     if string
-//     │     ─┬  
+//     │     ─┬
 //     │      ╰── Expected Unexpected token in class body, found if
-//     │ 
+//     │
 //     │ Note: Error code: E0010
 // ────╯
 // error: field 'string' is missing a type annotation
 //     ╭─[ class_generator_keywords1.baml:13:8 ]
 //     │
 //  13 │     if string
-//     │        ───┬──  
+//     │        ───┬──
 //     │           ╰──── field 'string' is missing a type annotation
-//     │ 
+//     │
 //     │ Note: Error code: E0010
 // ────╯
+// warning: `generator lang_python` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+//    ╭─[ class_generator_keywords1.baml:1:1 ]
+//    │
+//  1 │ generator lang_python {
+//    │ ──────────┬──────────
+//    │           ╰──────────── move this to baml.toml
+//    │
+//    │ Note: Error code: E0017
+// ───╯

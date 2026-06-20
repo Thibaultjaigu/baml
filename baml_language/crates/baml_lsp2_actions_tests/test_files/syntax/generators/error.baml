@@ -18,4 +18,12 @@ generator default {
 
 //----
 //- diagnostics
-// <no-diagnostics-expected>
+// warning: `generator default` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+//    ╭─[ generators_error.baml:1:1 ]
+//    │
+//  1 │ generator default {
+//    │ ────────┬────────
+//    │         ╰────────── move this to baml.toml
+//    │
+//    │ Note: Error code: E0017
+// ───╯

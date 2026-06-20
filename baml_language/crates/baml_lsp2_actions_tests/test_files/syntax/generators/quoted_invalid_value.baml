@@ -10,4 +10,12 @@ generator quoted_invalid {
 
 //----
 //- diagnostics
-// <no-diagnostics-expected>
+// warning: `generator quoted_invalid` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+//    ╭─[ generators_quoted_invalid_value.baml:5:1 ]
+//    │
+//  5 │ generator quoted_invalid {
+//    │ ────────────┬───────────
+//    │             ╰───────────── move this to baml.toml
+//    │
+//    │ Note: Error code: E0017
+// ───╯

@@ -25,4 +25,12 @@ generator target{
 
 //----
 //- diagnostics
-// <no-diagnostics-expected>
+// warning: `generator target` is ignored: code generators are configured in `baml.toml` now. Move it to a `[generator.<name>]` section in baml.toml.
+//     ╭─[ enum_enum_is_valid.baml:13:1 ]
+//     │
+//  13 │ generator target{
+//     │ ────────┬───────
+//     │         ╰───────── move this to baml.toml
+//     │
+//     │ Note: Error code: E0017
+// ────╯
